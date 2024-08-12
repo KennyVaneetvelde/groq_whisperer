@@ -18,7 +18,7 @@
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/whisperer.git
+   git clone https://github.com/KennyVaneetvelde/groq_whisperer
    cd whisperer
    ```
 
