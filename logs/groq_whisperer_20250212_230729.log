@@ -1,0 +1,1494 @@
+2025-02-12 23:07:30 | INFO | Starting Groq Whisperer
+2025-02-12 23:07:30 | DEBUG | Initializing audio recording
+2025-02-12 23:12:11 | INFO | Recording started
+2025-02-12 23:12:13 | INFO | Recording finished
+2025-02-12 23:12:13 | DEBUG | Audio recorded: 36 frames at 16000Hz
+2025-02-12 23:12:14 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp0h4dn1y5.wav
+2025-02-12 23:12:14 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp0h4dn1y5.wav
+2025-02-12 23:12:14 | DEBUG | Sending request to Groq API
+2025-02-12 23:12:14 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp0h4dn1y5.wav
+2025-02-12 23:12:14 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    response = client.chat.completions.create(
+               │      │    │           └ <function Completions.create at 0x000001D479C39300>
+               │      │    └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+               │      └ <groq.resources.chat.chat.Chat object at 0x000001D479C0CD40>
+               └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    temp_audio_file = save_audio(frames, sample_rate)
+                      │          │       └ 16000
+                      │          └ [b'\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x...
+                      └ <function save_audio at 0x000001D479D3AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    logger.error(f"Transcription error: {str(e)}", exception=e)
+    │      └ <function Logger.error at 0x000001D479D90180>
+    └ <loguru.logger handlers=[(id=1, level=10, sink='D:\git\groq_whisperer - Copy\logs\groq_whisperer_20250212_230729.log'), (id=2...
+
+KeyError: "'error'"
+2025-02-12 23:12:14 | DEBUG | Initializing audio recording
+2025-02-12 23:12:18 | INFO | Recording started
+2025-02-12 23:12:20 | INFO | Recording finished
+2025-02-12 23:12:20 | DEBUG | Audio recorded: 26 frames at 16000Hz
+2025-02-12 23:12:20 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp6nf86_q3.wav
+2025-02-12 23:12:20 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp6nf86_q3.wav
+2025-02-12 23:12:20 | DEBUG | Sending request to Groq API
+2025-02-12 23:12:20 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp6nf86_q3.wav
+2025-02-12 23:12:20 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    response = client.chat.completions.create(
+               │      │    │           └ <function Completions.create at 0x000001D479C39300>
+               │      │    └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+               │      └ <groq.resources.chat.chat.Chat object at 0x000001D479C0CD40>
+               └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    temp_audio_file = save_audio(frames, sample_rate)
+                      │          │       └ 16000
+                      │          └ [b'\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x...
+                      └ <function save_audio at 0x000001D479D3AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    logger.error(f"Transcription error: {str(e)}", exception=e)
+    │      └ <function Logger.error at 0x000001D479D90180>
+    └ <loguru.logger handlers=[(id=1, level=10, sink='D:\git\groq_whisperer - Copy\logs\groq_whisperer_20250212_230729.log'), (id=2...
+
+KeyError: "'error'"
+2025-02-12 23:12:20 | DEBUG | Initializing audio recording
+2025-02-12 23:12:25 | INFO | Recording started
+2025-02-12 23:12:27 | INFO | Recording finished
+2025-02-12 23:12:27 | DEBUG | Audio recorded: 27 frames at 16000Hz
+2025-02-12 23:12:27 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpw3niqudn.wav
+2025-02-12 23:12:27 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpw3niqudn.wav
+2025-02-12 23:12:27 | DEBUG | Sending request to Groq API
+2025-02-12 23:12:27 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpw3niqudn.wav
+2025-02-12 23:12:27 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    response = client.chat.completions.create(
+               │      │    │           └ <function Completions.create at 0x000001D479C39300>
+               │      │    └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+               │      └ <groq.resources.chat.chat.Chat object at 0x000001D479C0CD40>
+               └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    temp_audio_file = save_audio(frames, sample_rate)
+                      │          │       └ 16000
+                      │          └ [b'\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x...
+                      └ <function save_audio at 0x000001D479D3AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    logger.error(f"Transcription error: {str(e)}", exception=e)
+    │      └ <function Logger.error at 0x000001D479D90180>
+    └ <loguru.logger handlers=[(id=1, level=10, sink='D:\git\groq_whisperer - Copy\logs\groq_whisperer_20250212_230729.log'), (id=2...
+
+KeyError: "'error'"
+2025-02-12 23:12:27 | DEBUG | Initializing audio recording
+2025-02-12 23:17:49 | INFO | Recording started
+2025-02-12 23:17:51 | INFO | Recording finished
+2025-02-12 23:17:51 | DEBUG | Audio recorded: 35 frames at 16000Hz
+2025-02-12 23:17:51 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpiwlnidum.wav
+2025-02-12 23:17:51 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpiwlnidum.wav
+2025-02-12 23:17:51 | DEBUG | Sending request to Groq API
+2025-02-12 23:17:51 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpiwlnidum.wav
+2025-02-12 23:17:51 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    response = client.chat.completions.create(
+               │      │    │           └ <function Completions.create at 0x000001D479C39300>
+               │      │    └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+               │      └ <groq.resources.chat.chat.Chat object at 0x000001D479C0CD40>
+               └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    temp_audio_file = save_audio(frames, sample_rate)
+                      │          │       └ 16000
+                      │          └ [b'\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\xff\xff\x...
+                      └ <function save_audio at 0x000001D479D3AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    logger.error(f"Transcription error: {str(e)}", exception=e)
+    │      └ <function Logger.error at 0x000001D479D90180>
+    └ <loguru.logger handlers=[(id=1, level=10, sink='D:\git\groq_whisperer - Copy\logs\groq_whisperer_20250212_230729.log'), (id=2...
+
+KeyError: "'error'"
+2025-02-12 23:17:51 | DEBUG | Initializing audio recording
+2025-02-12 23:18:01 | INFO | Recording started
+2025-02-12 23:18:02 | INFO | Recording finished
+2025-02-12 23:18:02 | DEBUG | Audio recorded: 19 frames at 16000Hz
+2025-02-12 23:18:02 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpom__5l2a.wav
+2025-02-12 23:18:02 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpom__5l2a.wav
+2025-02-12 23:18:02 | DEBUG | Sending request to Groq API
+2025-02-12 23:18:02 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpom__5l2a.wav
+2025-02-12 23:18:02 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:18:02 | DEBUG | Initializing audio recording
+2025-02-12 23:19:14 | INFO | Recording started
+2025-02-12 23:19:15 | INFO | Recording finished
+2025-02-12 23:19:15 | DEBUG | Audio recorded: 27 frames at 16000Hz
+2025-02-12 23:19:16 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpngtlgh9h.wav
+2025-02-12 23:19:16 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpngtlgh9h.wav
+2025-02-12 23:19:16 | DEBUG | Sending request to Groq API
+2025-02-12 23:19:16 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpngtlgh9h.wav
+2025-02-12 23:19:16 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:19:16 | DEBUG | Initializing audio recording
+2025-02-12 23:21:02 | INFO | Recording started
+2025-02-12 23:21:05 | INFO | Recording finished
+2025-02-12 23:21:05 | DEBUG | Audio recorded: 44 frames at 16000Hz
+2025-02-12 23:21:05 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpm95bmf8a.wav
+2025-02-12 23:21:05 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpm95bmf8a.wav
+2025-02-12 23:21:05 | DEBUG | Sending request to Groq API
+2025-02-12 23:21:05 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpm95bmf8a.wav
+2025-02-12 23:21:05 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:21:05 | DEBUG | Initializing audio recording
+2025-02-12 23:21:13 | INFO | Recording started
+2025-02-12 23:21:14 | INFO | Recording finished
+2025-02-12 23:21:14 | DEBUG | Audio recorded: 19 frames at 16000Hz
+2025-02-12 23:21:14 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpxayxq1_0.wav
+2025-02-12 23:21:14 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpxayxq1_0.wav
+2025-02-12 23:21:14 | DEBUG | Sending request to Groq API
+2025-02-12 23:21:14 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpxayxq1_0.wav
+2025-02-12 23:21:14 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:21:14 | DEBUG | Initializing audio recording
+2025-02-12 23:24:30 | INFO | Recording started
+2025-02-12 23:24:30 | INFO | Recording finished
+2025-02-12 23:24:30 | DEBUG | Audio recorded: 10 frames at 16000Hz
+2025-02-12 23:24:30 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp1egyxxxa.wav
+2025-02-12 23:24:30 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp1egyxxxa.wav
+2025-02-12 23:24:30 | DEBUG | Sending request to Groq API
+2025-02-12 23:24:32 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp1egyxxxa.wav
+2025-02-12 23:24:32 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 77381, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:24:32 | DEBUG | Initializing audio recording
+2025-02-12 23:24:32 | INFO | Recording started
+2025-02-12 23:24:33 | INFO | Recording finished
+2025-02-12 23:24:33 | DEBUG | Audio recorded: 27 frames at 16000Hz
+2025-02-12 23:24:33 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmprcj9gr30.wav
+2025-02-12 23:24:34 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmprcj9gr30.wav
+2025-02-12 23:24:34 | DEBUG | Sending request to Groq API
+2025-02-12 23:24:34 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmprcj9gr30.wav
+2025-02-12 23:24:34 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 182962, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:24:34 | DEBUG | Initializing audio recording
+2025-02-12 23:24:54 | INFO | Recording started
+2025-02-12 23:24:59 | INFO | Recording finished
+2025-02-12 23:24:59 | DEBUG | Audio recorded: 73 frames at 16000Hz
+2025-02-12 23:24:59 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpsx4fqhgz.wav
+2025-02-12 23:24:59 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpsx4fqhgz.wav
+2025-02-12 23:24:59 | DEBUG | Sending request to Groq API
+2025-02-12 23:25:02 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpsx4fqhgz.wav
+2025-02-12 23:25:02 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on tokens per minute (TPM): Limit 5000, Requested 455935, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:25:02 | DEBUG | Initializing audio recording
+2025-02-12 23:26:47 | INFO | Recording started
+2025-02-12 23:27:08 | INFO | Recording finished
+2025-02-12 23:27:08 | DEBUG | Audio recorded: 341 frames at 16000Hz
+2025-02-12 23:27:08 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp7_mu5cww.wav
+2025-02-12 23:27:08 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp7_mu5cww.wav
+2025-02-12 23:27:08 | DEBUG | Sending request to Groq API
+2025-02-12 23:27:15 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp7_mu5cww.wav
+2025-02-12 23:27:15 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on : Limit 500000, Requested 2136028, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': '', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:27:15 | DEBUG | Initializing audio recording
+2025-02-12 23:29:09 | INFO | Recording started
+2025-02-12 23:29:21 | INFO | Recording finished
+2025-02-12 23:29:21 | DEBUG | Audio recorded: 180 frames at 16000Hz
+2025-02-12 23:29:21 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpjulw3jkk.wav
+2025-02-12 23:29:21 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpjulw3jkk.wav
+2025-02-12 23:29:21 | DEBUG | Sending request to Groq API
+2025-02-12 23:29:26 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpjulw3jkk.wav
+2025-02-12 23:29:26 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on : Limit 500000, Requested 1126075, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': '', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:29:26 | DEBUG | Initializing audio recording
+2025-02-12 23:29:37 | INFO | Recording started
+2025-02-12 23:29:54 | INFO | Recording finished
+2025-02-12 23:29:54 | DEBUG | Audio recorded: 269 frames at 16000Hz
+2025-02-12 23:29:54 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp6erjqce_.wav
+2025-02-12 23:29:54 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp6erjqce_.wav
+2025-02-12 23:29:54 | DEBUG | Sending request to Groq API
+2025-02-12 23:29:59 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp6erjqce_.wav
+2025-02-12 23:29:59 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.APIStatusError: Error code: 413 - {'error': {'message': 'Request too large for model `mixtral-8x7b-32768` in organization `org_01jkdeh8tjff9sqwwkabwaszhf` service tier `on_demand` on : Limit 500000, Requested 1661442, please reduce your message size and try again. Visit https://console.groq.com/docs/rate-limits for more information.', 'type': '', 'code': 'rate_limit_exceeded'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:29:59 | DEBUG | Initializing audio recording
+2025-02-12 23:42:43 | INFO | Recording started
+2025-02-12 23:42:45 | INFO | Recording finished
+2025-02-12 23:42:45 | DEBUG | Audio recorded: 43 frames at 16000Hz
+2025-02-12 23:42:45 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpahm7nepx.wav
+2025-02-12 23:42:45 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpahm7nepx.wav
+2025-02-12 23:42:45 | DEBUG | Sending request to Groq API
+2025-02-12 23:42:46 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpahm7nepx.wav
+2025-02-12 23:42:46 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:42:46 | DEBUG | Initializing audio recording
+2025-02-12 23:42:48 | INFO | Recording started
+2025-02-12 23:42:50 | INFO | Recording finished
+2025-02-12 23:42:50 | DEBUG | Audio recorded: 30 frames at 16000Hz
+2025-02-12 23:42:50 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpvghrjruf.wav
+2025-02-12 23:42:50 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpvghrjruf.wav
+2025-02-12 23:42:50 | DEBUG | Sending request to Groq API
+2025-02-12 23:42:50 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpvghrjruf.wav
+2025-02-12 23:42:50 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:42:50 | DEBUG | Initializing audio recording
+2025-02-12 23:43:56 | INFO | Recording started
+2025-02-12 23:43:57 | INFO | Recording finished
+2025-02-12 23:43:57 | DEBUG | Audio recorded: 26 frames at 16000Hz
+2025-02-12 23:43:57 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpxj7kttos.wav
+2025-02-12 23:43:57 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpxj7kttos.wav
+2025-02-12 23:43:57 | DEBUG | Sending request to Groq API
+2025-02-12 23:43:58 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpxj7kttos.wav
+2025-02-12 23:43:58 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:43:58 | DEBUG | Initializing audio recording
+2025-02-12 23:46:30 | INFO | Recording started
+2025-02-12 23:46:30 | INFO | Recording finished
+2025-02-12 23:46:30 | DEBUG | Audio recorded: 8 frames at 16000Hz
+2025-02-12 23:46:30 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp24mrbzgv.wav
+2025-02-12 23:46:30 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp24mrbzgv.wav
+2025-02-12 23:46:30 | DEBUG | Sending request to Groq API
+2025-02-12 23:46:31 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp24mrbzgv.wav
+2025-02-12 23:46:31 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-12 23:46:31 | DEBUG | Initializing audio recording
+2025-02-13 00:05:56 | INFO | Recording started
+2025-02-13 00:05:57 | INFO | Recording finished
+2025-02-13 00:05:57 | DEBUG | Audio recorded: 10 frames at 16000Hz
+2025-02-13 00:05:57 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp2ieiesjc.wav
+2025-02-13 00:05:57 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp2ieiesjc.wav
+2025-02-13 00:05:57 | DEBUG | Sending request to Groq API
+2025-02-13 00:05:57 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp2ieiesjc.wav
+2025-02-13 00:05:57 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 00:05:57 | DEBUG | Initializing audio recording
+2025-02-13 00:05:59 | INFO | Recording started
+2025-02-13 00:05:59 | INFO | Recording finished
+2025-02-13 00:05:59 | DEBUG | Audio recorded: 6 frames at 16000Hz
+2025-02-13 00:05:59 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp28370j7b.wav
+2025-02-13 00:05:59 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp28370j7b.wav
+2025-02-13 00:05:59 | DEBUG | Sending request to Groq API
+2025-02-13 00:05:59 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp28370j7b.wav
+2025-02-13 00:05:59 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 00:05:59 | DEBUG | Initializing audio recording
+2025-02-13 00:11:46 | INFO | Recording started
+2025-02-13 00:11:48 | INFO | Recording finished
+2025-02-13 00:11:48 | DEBUG | Audio recorded: 32 frames at 16000Hz
+2025-02-13 00:11:48 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmprf6tv240.wav
+2025-02-13 00:11:48 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmprf6tv240.wav
+2025-02-13 00:11:48 | DEBUG | Sending request to Groq API
+2025-02-13 00:11:48 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmprf6tv240.wav
+2025-02-13 00:11:48 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 00:11:48 | DEBUG | Initializing audio recording
+2025-02-13 01:17:13 | INFO | Recording started
+2025-02-13 01:17:13 | INFO | Recording finished
+2025-02-13 01:17:13 | DEBUG | Audio recorded: 12 frames at 16000Hz
+2025-02-13 01:17:13 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp9ipub69e.wav
+2025-02-13 01:17:13 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp9ipub69e.wav
+2025-02-13 01:17:13 | DEBUG | Sending request to Groq API
+2025-02-13 01:17:14 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp9ipub69e.wav
+2025-02-13 01:17:14 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 01:17:14 | DEBUG | Initializing audio recording
+2025-02-13 01:17:18 | INFO | Recording started
+2025-02-13 01:17:18 | INFO | Recording finished
+2025-02-13 01:17:18 | DEBUG | Audio recorded: 9 frames at 16000Hz
+2025-02-13 01:17:18 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp33c2rj4n.wav
+2025-02-13 01:17:18 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp33c2rj4n.wav
+2025-02-13 01:17:18 | DEBUG | Sending request to Groq API
+2025-02-13 01:17:18 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp33c2rj4n.wav
+2025-02-13 01:17:18 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 01:17:18 | DEBUG | Initializing audio recording
+2025-02-13 01:47:31 | INFO | Recording started
+2025-02-13 01:47:32 | INFO | Recording finished
+2025-02-13 01:47:33 | DEBUG | Audio recorded: 24 frames at 16000Hz
+2025-02-13 01:47:33 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp44mdgn2v.wav
+2025-02-13 01:47:33 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp44mdgn2v.wav
+2025-02-13 01:47:33 | DEBUG | Sending request to Groq API
+2025-02-13 01:47:33 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp44mdgn2v.wav
+2025-02-13 01:47:33 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 106, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     └ <functools.cached_property object at 0x000001D479C4AD50>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x000001D479D3CF50>
+                    └ <groq.Groq object at 0x000001D479D3D040>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\chat\completions.py", line 289, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x000001D479D3D040>>
+           └ <groq.resources.chat.completions.Completions object at 0x000001D47815B980>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ groq.Stream[groq.types.chat.chat_completion_chunk.ChatCompletionChunk]
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/chat/completions', params={}, headers=NOT_GIVEN, max_retries=NOT_GIVEN, ti...
+           │    │          │    │       └ <class 'groq.types.chat.chat_completion.ChatCompletion'>
+           │    │          │    └ <function SyncAPIClient.request at 0x000001D479C46700>
+           │    │          └ <groq.Groq object at 0x000001D479D3D040>
+           │    └ ~ResponseT
+           └ <function cast at 0x000001D4767ED6C0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x000001D479C467A0>
+           └ <groq.Groq object at 0x000001D479D3D040>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x000001D479C44EA0>
+          └ <groq.Groq object at 0x000001D479D3D040>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 200, in <module>
+    live.refresh()
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 165, in main
+    layout["status"].update(Align.center("[yellow]Transcribing audio...[/yellow]"))
+    │                       │     └ <classmethod(<function Align.center at 0x000001D47987DD00>)>
+    │                       └ <class 'rich.align.Align'>
+    └ Layout()
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 126, in transcribe_audio
+    def copy_transcription_to_clipboard(text):
+        └ <function copy_transcription_to_clipboard at 0x000001D479D3AD40>
+
+KeyError: "'error'"
+2025-02-13 01:47:33 | DEBUG | Initializing audio recording

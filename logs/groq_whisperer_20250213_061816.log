@@ -1,0 +1,21 @@
+2025-02-13 06:18:16 | INFO | Starting Groq Whisperer
+2025-02-13 06:18:16 | DEBUG | Initializing audio recording
+2025-02-13 06:19:03 | INFO | Recording started
+2025-02-13 06:19:04 | INFO | Recording finished
+2025-02-13 06:19:04 | DEBUG | Audio recorded: 17 frames at 16000Hz
+2025-02-13 06:19:04 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpc4voyk2q.wav
+2025-02-13 06:19:04 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpc4voyk2q.wav
+2025-02-13 06:19:04 | DEBUG | Sending request to Groq API
+2025-02-13 06:19:04 | ERROR | Transcription failed
+2025-02-13 06:19:04 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpc4voyk2q.wav
+2025-02-13 06:19:04 | DEBUG | Initializing audio recording
+2025-02-13 06:19:06 | INFO | Recording started
+2025-02-13 06:19:07 | INFO | Recording finished
+2025-02-13 06:19:07 | DEBUG | Audio recorded: 15 frames at 16000Hz
+2025-02-13 06:19:07 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp3_wom2vr.wav
+2025-02-13 06:19:07 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp3_wom2vr.wav
+2025-02-13 06:19:07 | DEBUG | Sending request to Groq API
+2025-02-13 06:19:07 | ERROR | Transcription failed
+2025-02-13 06:19:07 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp3_wom2vr.wav
+2025-02-13 06:19:07 | DEBUG | Initializing audio recording
+2025-02-13 06:19:31 | INFO | Application terminated by user

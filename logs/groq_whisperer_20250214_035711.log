@@ -1,0 +1,12 @@
+2025-02-14 03:57:12 | INFO | Starting Groq Whisperer
+2025-02-14 03:57:12 | DEBUG | Initializing audio recording
+2025-02-14 03:58:06 | INFO | Recording started
+2025-02-14 03:58:07 | INFO | Recording finished
+2025-02-14 03:58:07 | DEBUG | Audio recorded: 10 frames at 16000Hz
+2025-02-14 03:58:07 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpgof6fbe5.wav
+2025-02-14 03:58:07 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpgof6fbe5.wav
+2025-02-14 03:58:07 | DEBUG | Sending request to Groq API
+2025-02-14 03:58:08 | INFO | Transcription received: ...
+2025-02-14 03:58:08 | ERROR | Transcription failed
+2025-02-14 03:58:08 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpgof6fbe5.wav
+2025-02-14 03:58:08 | DEBUG | Initializing audio recording

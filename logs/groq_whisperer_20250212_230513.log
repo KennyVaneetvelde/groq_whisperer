@@ -1,0 +1,127 @@
+2025-02-12 23:05:14 | INFO | Starting Groq Whisperer
+2025-02-12 23:05:14 | DEBUG | Initializing audio recording
+2025-02-12 23:05:17 | INFO | Recording started
+2025-02-12 23:05:19 | INFO | Recording finished
+2025-02-12 23:05:19 | DEBUG | Audio recorded: 30 frames at 16000Hz
+2025-02-12 23:05:19 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp5pvvm74t.wav
+2025-02-12 23:05:19 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp5pvvm74t.wav
+2025-02-12 23:05:19 | DEBUG | Sending request to Groq API
+2025-02-12 23:05:19 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp5pvvm74t.wav
+2025-02-12 23:05:19 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 111, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     │              └ <function Transcriptions.create at 0x0000027BE3F6B6A0>
+                    │      │     └ <groq.resources.audio.transcriptions.Transcriptions object at 0x0000027BE401CA70>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x0000027BE4125700>
+                    └ <groq.Groq object at 0x0000027BE3E4EDB0>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\audio\transcriptions.py", line 118, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x0000027BE3E4EDB0>>
+           └ <groq.resources.audio.transcriptions.Transcriptions object at 0x0000027BE401CA70>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ None
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/audio/transcriptions', params={}, headers={'Content-Type': 'multipart/form...
+           │    │          │    │       └ <class 'groq.types.audio.transcription.Transcription'>
+           │    │          │    └ <function SyncAPIClient.request at 0x0000027BE3F76660>
+           │    │          └ <groq.Groq object at 0x0000027BE3E4EDB0>
+           │    └ ~ResponseT
+           └ <function cast at 0x0000027BE0C41620>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x0000027BE3F76700>
+           └ <groq.Groq object at 0x0000027BE3E4EDB0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x0000027BE3F74E00>
+          └ <groq.Groq object at 0x0000027BE3E4EDB0>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 201, in <module>
+    main()
+    └ <function main at 0x0000027BE406AD40>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 166, in main
+    transcription = transcribe_audio(temp_audio_file)
+                    │                └ 'C:\\Users\\d0nbx\\AppData\\Local\\Temp\\tmp5pvvm74t.wav'
+                    └ <function transcribe_audio at 0x0000027BE406AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 120, in transcribe_audio
+    except groq.NotFoundError as e:
+
+NameError: name 'groq' is not defined
+2025-02-12 23:05:19 | DEBUG | Initializing audio recording
+2025-02-12 23:05:20 | INFO | Recording started
+2025-02-12 23:05:22 | INFO | Recording finished
+2025-02-12 23:05:22 | DEBUG | Audio recorded: 26 frames at 16000Hz
+2025-02-12 23:05:22 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpj44vozfa.wav
+2025-02-12 23:05:22 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpj44vozfa.wav
+2025-02-12 23:05:22 | DEBUG | Sending request to Groq API
+2025-02-12 23:05:22 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpj44vozfa.wav
+2025-02-12 23:05:22 | ERROR | Error in main loop
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 111, in transcribe_audio
+    transcription = client.audio.transcriptions.create(
+                    │      │     │              └ <function Transcriptions.create at 0x0000027BE3F6B6A0>
+                    │      │     └ <groq.resources.audio.transcriptions.Transcriptions object at 0x0000027BE401CA70>
+                    │      └ <groq.resources.audio.audio.Audio object at 0x0000027BE4125700>
+                    └ <groq.Groq object at 0x0000027BE3E4EDB0>
+
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\resources\audio\transcriptions.py", line 118, in create
+    return self._post(
+           │    └ <bound method SyncAPIClient.post of <groq.Groq object at 0x0000027BE3E4EDB0>>
+           └ <groq.resources.audio.transcriptions.Transcriptions object at 0x0000027BE401CA70>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1225, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+           │    │          │    │       │        │            │                  └ None
+           │    │          │    │       │        │            └ False
+           │    │          │    │       │        └ FinalRequestOptions(method='post', url='/openai/v1/audio/transcriptions', params={}, headers={'Content-Type': 'multipart/form...
+           │    │          │    │       └ <class 'groq.types.audio.transcription.Transcription'>
+           │    │          │    └ <function SyncAPIClient.request at 0x0000027BE3F76660>
+           │    │          └ <groq.Groq object at 0x0000027BE3E4EDB0>
+           │    └ ~ResponseT
+           └ <function cast at 0x0000027BE0C41620>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 920, in request
+    return self._request(
+           │    └ <function SyncAPIClient._request at 0x0000027BE3F76700>
+           └ <groq.Groq object at 0x0000027BE3E4EDB0>
+  File "C:\Users\d0nbx\anaconda3\Lib\site-packages\groq\_base_client.py", line 1018, in _request
+    raise self._make_status_error_from_response(err.response) from None
+          │    └ <function BaseClient._make_status_error_from_response at 0x0000027BE3F74E00>
+          └ <groq.Groq object at 0x0000027BE3E4EDB0>
+
+groq.NotFoundError: Error code: 404 - {'error': {'message': 'Not Found'}}
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 201, in <module>
+    main()
+    └ <function main at 0x0000027BE406AD40>
+
+> File "D:\git\groq_whisperer - Copy\main.py", line 166, in main
+    transcription = transcribe_audio(temp_audio_file)
+                    │                └ 'C:\\Users\\d0nbx\\AppData\\Local\\Temp\\tmpj44vozfa.wav'
+                    └ <function transcribe_audio at 0x0000027BE406AC00>
+
+  File "D:\git\groq_whisperer - Copy\main.py", line 120, in transcribe_audio
+    except groq.NotFoundError as e:
+
+NameError: name 'groq' is not defined
+2025-02-12 23:05:22 | DEBUG | Initializing audio recording
+2025-02-12 23:07:25 | INFO | Application terminated by user

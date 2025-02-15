@@ -1,0 +1,69 @@
+2025-02-13 12:06:40 | INFO | Starting Groq Whisperer
+2025-02-13 12:06:40 | DEBUG | Initializing audio recording
+2025-02-13 12:06:43 | INFO | Recording started
+2025-02-13 12:06:44 | INFO | Recording finished
+2025-02-13 12:06:44 | DEBUG | Audio recorded: 21 frames at 16000Hz
+2025-02-13 12:06:44 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpmicqdah7.wav
+2025-02-13 12:06:44 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpmicqdah7.wav
+2025-02-13 12:06:44 | DEBUG | Sending request to Groq API
+2025-02-13 12:06:47 | INFO | Transcription received:  Dave....
+2025-02-13 12:06:47 | SUCCESS | Transcription successful
+2025-02-13 12:06:47 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:06:47 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpmicqdah7.wav
+2025-02-13 12:06:47 | DEBUG | Initializing audio recording
+2025-02-13 12:06:48 | INFO | Recording started
+2025-02-13 12:06:50 | INFO | Recording finished
+2025-02-13 12:06:50 | DEBUG | Audio recorded: 26 frames at 16000Hz
+2025-02-13 12:06:50 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp9ykpl6jg.wav
+2025-02-13 12:06:50 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp9ykpl6jg.wav
+2025-02-13 12:06:50 | DEBUG | Sending request to Groq API
+2025-02-13 12:06:50 | INFO | Transcription received:  Hey, what's up, how are you?...
+2025-02-13 12:06:50 | SUCCESS | Transcription successful
+2025-02-13 12:06:50 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:06:50 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp9ykpl6jg.wav
+2025-02-13 12:06:50 | DEBUG | Initializing audio recording
+2025-02-13 12:06:53 | INFO | Recording started
+2025-02-13 12:06:55 | INFO | Recording finished
+2025-02-13 12:06:55 | DEBUG | Audio recorded: 21 frames at 16000Hz
+2025-02-13 12:06:55 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpggrff2qe.wav
+2025-02-13 12:06:55 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpggrff2qe.wav
+2025-02-13 12:06:55 | DEBUG | Sending request to Groq API
+2025-02-13 12:06:55 | INFO | Transcription received:  Hello....
+2025-02-13 12:06:55 | SUCCESS | Transcription successful
+2025-02-13 12:06:55 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:06:55 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpggrff2qe.wav
+2025-02-13 12:06:55 | DEBUG | Initializing audio recording
+2025-02-13 12:06:57 | INFO | Recording started
+2025-02-13 12:06:59 | INFO | Recording finished
+2025-02-13 12:06:59 | DEBUG | Audio recorded: 36 frames at 16000Hz
+2025-02-13 12:06:59 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp_egroa_4.wav
+2025-02-13 12:06:59 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp_egroa_4.wav
+2025-02-13 12:06:59 | DEBUG | Sending request to Groq API
+2025-02-13 12:07:00 | INFO | Transcription received:  How's it going?...
+2025-02-13 12:07:00 | SUCCESS | Transcription successful
+2025-02-13 12:07:00 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:07:00 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp_egroa_4.wav
+2025-02-13 12:07:00 | DEBUG | Initializing audio recording
+2025-02-13 12:07:11 | INFO | Recording started
+2025-02-13 12:07:12 | INFO | Recording finished
+2025-02-13 12:07:12 | DEBUG | Audio recorded: 18 frames at 16000Hz
+2025-02-13 12:07:12 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmpfinf7s6x.wav
+2025-02-13 12:07:12 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmpfinf7s6x.wav
+2025-02-13 12:07:12 | DEBUG | Sending request to Groq API
+2025-02-13 12:07:13 | INFO | Transcription received:  And...
+2025-02-13 12:07:13 | SUCCESS | Transcription successful
+2025-02-13 12:07:13 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:07:13 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmpfinf7s6x.wav
+2025-02-13 12:07:13 | DEBUG | Initializing audio recording
+2025-02-13 12:07:14 | INFO | Recording started
+2025-02-13 12:07:16 | INFO | Recording finished
+2025-02-13 12:07:16 | DEBUG | Audio recorded: 29 frames at 16000Hz
+2025-02-13 12:07:16 | DEBUG | Audio saved to: C:\Users\d0nbx\AppData\Local\Temp\tmp3nw1byil.wav
+2025-02-13 12:07:16 | DEBUG | Starting transcription of file: C:\Users\d0nbx\AppData\Local\Temp\tmp3nw1byil.wav
+2025-02-13 12:07:16 | DEBUG | Sending request to Groq API
+2025-02-13 12:07:16 | INFO | Transcription received:  Hey, what's up?...
+2025-02-13 12:07:16 | SUCCESS | Transcription successful
+2025-02-13 12:07:17 | DEBUG | Transcription copied to clipboard
+2025-02-13 12:07:17 | DEBUG | Cleaned up temporary file: C:\Users\d0nbx\AppData\Local\Temp\tmp3nw1byil.wav
+2025-02-13 12:07:17 | DEBUG | Initializing audio recording
+2025-02-13 12:07:25 | INFO | Application terminated by user

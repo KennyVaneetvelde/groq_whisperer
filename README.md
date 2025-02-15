@@ -26,7 +26,7 @@
    ```
    python -m venv venv
    ```
-
+[System.Environment]::SetEnvironmentVariable("GROQ_API_KEY", "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", "User")
 3. Activate the virtual environment:
    - On Windows:
      ```
@@ -45,7 +45,7 @@
 5. Set up your Groq API key as an environment variable:
    - On Windows:
      ```
-     setx GROQ_API_KEY "your-api-key-here"
+     setx GROQ_API_KEY "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"
      ```
    - On macOS and Linux:
      ```
